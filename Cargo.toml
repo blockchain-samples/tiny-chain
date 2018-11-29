@@ -1,0 +1,6 @@
+[package]
+name = "tinychain"
+version = "0.1.0"
+authors = ["iveltondequeirozm <iveltondequeiroz@gmail.com>"]
+
+[dependencies]
