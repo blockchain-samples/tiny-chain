@@ -4,3 +4,10 @@ version = "0.1.0"
 authors = ["iveltondequeirozm <iveltondequeiroz@gmail.com>"]
 
 [dependencies]
+time = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+sha2 = "*"
+        
+
