@@ -106,7 +106,7 @@ impl Chain {
         block.header.merkle = Chain::get_merkle(block.transactions.clone());
         Chain::proof_of_work(&mut block.header);
 
-        println!("{:?}", &block);
+        println!("{:#?}", &block);
         self.chain.push(block);
         true
     }
@@ -120,7 +120,7 @@ impl Chain {
         }
 
         if merkle.len() % 2 == 1 {
-            let last = merkle.last().clone().unwrap();
+            let last = merkle.last().cloned().unwrap();
             merkle.push(last);
         }
 
