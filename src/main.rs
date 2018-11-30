@@ -39,7 +39,7 @@ fn main() {
         match choice.trim().parse().unwrap() {
             0 => {
                 println!("exiting!");
-                process.exit(0);
+                process::exit(0);
             },
             1 => {
                 let mut sender = String::new();
@@ -76,7 +76,7 @@ fn main() {
                 print!("Enter new difficulty: ");
                 io::stdout().flush();
                 io::stdin().read_line(&mut new_diff);
-                let res = chain.update_difficulty(new_diff.trim().parse.unwrap());
+                let res = chain.update_difficulty(new_diff.trim().parse().unwrap());
                 match res {
                     true => println!("Updated difficulty"),
                     false => println!("Failed Updated difficulty"),
