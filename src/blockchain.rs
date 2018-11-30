@@ -1,6 +1,5 @@
 extern crate time;
 extern crate serde;
-extern crate serde_derive;
 extern crate serde_json;
 extern crate sha2;
 
@@ -84,6 +83,7 @@ impl Chain {
             timestamp: time::now().to_timespec().sec,
             nonce: 0,
             pre_hash: self.last_hash(),
+            merkle: String,
             difficulty: self.difficulty
         };
 
